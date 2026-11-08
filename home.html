@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block body %}
+<section class="panel"><span class="tag">PYTHON CLOUD HOSTING</span><h1>Build it. Deploy it.<br><span style="color:#a99fff">Run it on the cloud.</span></h1><p class="muted">Manage Python projects, subscriptions and deployments from one premium dashboard.</p><div class="row"><a class="btn" href="/register">Create free account</a><a href="/login">Sign in →</a></div><p class="muted">A paid plan is required before launching projects. Execution activates only after a secure isolated runner is connected.</p></section>
+<div class="spacer"></div><h2>Hosting plans</h2><div class="grid">{% for p in plans %}<div class="card"><h3>{{p.name}}</h3><div class="price">₹{{"%.0f"|format(p.price)}}<small class="muted"> / {{p.duration_days}} days</small></div><p class="muted">{{p.bot_limit}} projects · {{p.ram_mb}} MB RAM · {{p.storage_mb}} MB storage</p><a class="btn" href="/register">Choose plan</a></div>{% endfor %}</div>
+{% endblock %}
